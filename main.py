@@ -27,6 +27,9 @@ def main():
     getUrlFromUser()
 
     driver.get(url)
+    time.sleep(1000)
+    driver.close
+    
     
 if __name__ == "__main__":
     main()
