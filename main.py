@@ -1,6 +1,10 @@
 import requests
+from selenium import webdriver
+import time
 
-url = ''
+
+url = None
+driver = webdriver.Chrome()
 def getUrlFromUser():
     global url
     while True:
@@ -19,52 +23,10 @@ def getUrlFromUser():
         except Exception:
             print("Your url did not work")
 
-        
-        
-
-
-
-
-def workingWithSelenium():
-    import time
-    from selenium import webdriver
-    url = 'https://www.youtube.com/'
-
-    driver = webdriver.Chrome()
-    driver.get(url)
-    time.sleep(5)
-    driver.quit()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def main():
     getUrlFromUser()
-    print(url)
 
+    driver.get(url)
+    
 if __name__ == "__main__":
     main()
